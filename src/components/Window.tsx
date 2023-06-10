@@ -3,6 +3,8 @@ import Draggable from 'react-draggable';
 import { Resizable } from 'react-resizable';
 import './Window.css';
 
+const BASE = 'zowe-apps-playground';
+
 const Window: React.FC<any> = ({ children }) => {
   const [windowSize, setWindowSize] = useState({ width: 800, height: 600 });
 
@@ -31,7 +33,7 @@ const Window: React.FC<any> = ({ children }) => {
               }}>
                 <img style={{
                   width: '14px',
-                }} src='/close-active.png' alt='icon' />
+                }} src={`/${BASE}/close-active.png`} alt='icon' />
               </button>
               <button style={{
                 background: 'none',
@@ -41,7 +43,7 @@ const Window: React.FC<any> = ({ children }) => {
                 <img style={{
                   width: '14px',
                   margin: '0 8px',
-                }} src='/minimize-active.png' alt='icon' />
+                }} src={`/${BASE}/minimize-active.png`} alt='icon' />
               </button>
               <button style={{
                 background: 'none',
@@ -50,8 +52,7 @@ const Window: React.FC<any> = ({ children }) => {
               }}>
                 <img style={{
                   width: '14px',
-
-                }} src='/expand-active.png' alt='icon' />
+                }} src={`/${BASE}/expand-active.png`} alt='icon' />
               </button>
             </div>
             <div className="window-title">App Store</div>

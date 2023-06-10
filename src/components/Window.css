@@ -1,0 +1,54 @@
+.window {
+  position: absolute;
+  border-radius: 8px;
+  background-color: white;
+  z-index: 9999;
+  box-shadow: rgb(51,51,51) 1px 1px 8px 0px;
+  width: 800px;
+  border: 3px solid rgb(61, 63, 66);
+  overflow: hidden;
+}
+
+.window-titlebar {
+  background-color: rgb(61, 63, 66);
+  display: flex;
+  color: #f4f4f4;
+  max-height: 29px;
+  padding: 10px 4px;
+  align-items: center;
+}
+
+.window-title {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.window-content {
+  height: 100%;
+}
+
+.react-resizable {
+  position: relative;
+}
+
+.react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  box-sizing: border-box;
+  padding: 3px;
+  cursor: se-resize;
+}
+
+.window-controls {
+  position: absolute;
+  left: 2px;
+  top: 7px;
+}

@@ -1,0 +1,22 @@
+.optionButton {
+    height: 30px;
+    border: none;
+    outline: none;
+    color: #9b9c9e;
+    background: inherit;
+    padding: 0 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.optionButton:hover {
+    background: #343434;
+}

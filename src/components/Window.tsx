@@ -31,7 +31,7 @@ const Window: React.FC<any> = ({ children }) => {
               }}>
                 <img style={{
                   width: '14px',
-                }} src='src/assets/close-active.png' alt='icon' />
+                }} src='/close-active.png' alt='icon' />
               </button>
               <button style={{
                 background: 'none',
@@ -41,7 +41,7 @@ const Window: React.FC<any> = ({ children }) => {
                 <img style={{
                   width: '14px',
                   margin: '0 8px',
-                }} src='src/assets/minimize-active.png' alt='icon' />
+                }} src='/minimize-active.png' alt='icon' />
               </button>
               <button style={{
                 background: 'none',
@@ -51,7 +51,7 @@ const Window: React.FC<any> = ({ children }) => {
                 <img style={{
                   width: '14px',
 
-                }} src='src/assets/expand-active.png' alt='icon' />
+                }} src='/expand-active.png' alt='icon' />
               </button>
             </div>
             <div className="window-title">App Store</div>

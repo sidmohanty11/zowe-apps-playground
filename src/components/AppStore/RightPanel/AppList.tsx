@@ -1,4 +1,4 @@
-const App = ({ name, icon }) => {
+const App = ({ name, icon }: any) => {
     return (
         <div>
             <img src={icon} alt={name} />

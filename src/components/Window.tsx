@@ -3,10 +3,10 @@ import Draggable from 'react-draggable';
 import { Resizable } from 'react-resizable';
 import './Window.css';
 
-const Window = ({ children }) => {
+const Window: React.FC<any> = ({ children }) => {
   const [windowSize, setWindowSize] = useState({ width: 800, height: 600 });
 
-  const handleResize = (e: any, { size }: any) => {
+  const handleResize = (_: any, { size }: any) => {
     setWindowSize(size);
   };
 

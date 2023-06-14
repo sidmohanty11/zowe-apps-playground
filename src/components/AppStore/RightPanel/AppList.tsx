@@ -1,4 +1,5 @@
 import Slider from 'react-slick';
+import styles from './AppList.module.css';
 
 const trunc = (str, n) => str.length > n ? str.substr(0, n - 1) + '...' : str;
 
@@ -7,21 +8,7 @@ const CustomNextArrow = (props) => {
     return (
         <div
             onClick={onClick}
-            style={{
-                position: "absolute",
-                right: "-20px",
-                top: "50%",
-                transform: "translateY(-50%)",
-                cursor: "pointer",
-                backgroundColor: '#222',
-                borderRadius: '50%',
-                padding: '6px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                zIndex: 2,
-                boxShadow: '0 0 5px 0 rgba(0,0,0,0.5)',
-            }}
+            className={`${styles.sliderArrow} ${styles.nextArrow}`}
         >
             <img src='/arrow-right.svg' width={20} height={20} />
         </div>
@@ -33,21 +20,7 @@ const CustomPrevArrow = (props) => {
     return (
         <div
             onClick={onClick}
-            style={{
-                position: "absolute",
-                left: "-20px",
-                top: "50%",
-                transform: "translateY(-50%)",
-                cursor: "pointer",
-                backgroundColor: '#222',
-                borderRadius: '50%',
-                padding: '6px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                zIndex: 2,
-                boxShadow:'0 0 5px 0 rgba(0,0,0,0.5)',
-            }}
+            className={`${styles.sliderArrow} ${styles.prevArrow}`}
         >
             <img src='/arrow-left.svg' width={20} height={20} />
         </div>
@@ -56,53 +29,20 @@ const CustomPrevArrow = (props) => {
 
 const App = ({ name, icon, description, publisher }) => {
     return (
-        <div style={{
-            display: "flex",
-            width: "90%",
-            height: "150px",
-            background: "#222",
-            borderRadius: "8px",
-            padding: "20px",
-            margin: '0 auto',
-            color: "#fff",
-        }}>
-            <img style={{
-                maxWidth: '48px',
-                maxHeight: '48px',
-            }} src={icon} alt={name} />
-            <div style={{
-                display: "flex",
-                flexDirection: "column",
-                marginLeft: "20px",
-                justifyContent: "space-between",
-                width: "100%",
-            }}>
-                <div style={{
-                    display: "flex",
-                    flexDirection: 'column',
-                }}>
-                    <span style={{
-                        fontSize: "12px",
-                        color: "#aaa",
-                    }}>
+        <div className={styles.appContainer}>
+            <img className={styles.appIcon} src={icon} alt={name} />
+            <div className={styles.appInfoContainer}>
+                <div className={styles.appNameContainer}>
+                    <span className={styles.appPublisher}>
                         {publisher}
                     </span>
-                    <span style={{
-                        fontSize: "14px",
-                    }}>{name}</span></div>
-                <span style={{
-                    fontSize: "12px",
-                    color: "#aaa",
-                }}>{trunc(description, 36)}</span>
-                <button style={{
-                    border: "none",
-                    borderRadius: "4px",
-                    color: "whitesmoke",
-                    cursor: "pointer",
-                    padding: "6px",
-                    background: "#3162ac",
-                    fontSize: "12px",
-                }}>Install</button>
+                    <span className={styles.appName}>{name}</span></div>
+                <span className={styles.appDescription}>{trunc(description, 36)}</span>
+                <button className={styles.installButton}>
+                    <img src='/download.svg' width={12} height={12} style={{
+                        marginRight: '4px',
+                    }} />
+                    Install</button>
             </div>
         </div>
     );
@@ -126,9 +66,7 @@ const AppList = () => {
     };
 
     return (
-        <div style={{
-            width: "90%",
-        }}>
+        <div className={styles.appList}>
             <Slider {...settings}>
                 {appsData.map((app) => (
                     <App key={app.id} name={app.name} icon={app.icon} description={app.description} publisher={app.publisher} />

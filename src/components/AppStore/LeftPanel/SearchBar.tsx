@@ -24,8 +24,7 @@ const SearchBar = () => {
                 color: "#fff",
                 background: "inherit",
                 padding: "0 10px",
-            borderRadius: "8px",
-
+                borderRadius: "8px",
             }} />
         </div>
     );

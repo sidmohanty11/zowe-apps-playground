@@ -9,6 +9,7 @@ const LeftPanel = () => {
             boxSizing: "border-box",
             borderRight: "1px solid #343434",
             marginTop: "10px",
+            minWidth: "200px",
         }}>
             <SearchBar />
             <NavigationButtons />
